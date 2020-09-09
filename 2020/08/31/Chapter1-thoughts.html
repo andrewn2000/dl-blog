@@ -1,0 +1,51 @@
+<h1 id="chapter-1---thoughts-and-reflections">Chapter 1 - thoughts and reflections</h1>
+
+<p>I finally managed to get through chapter 1 and the labs.  It was a challenge using Gradient as one of the labs continued to get an error.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">fastai.text.all</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">dls</span> <span class="o">=</span> <span class="n">TextDataLoaders</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">IMDB</span><span class="p">),</span> <span class="n">valid</span><span class="o">=</span><span class="s">'test'</span><span class="p">)</span>
+<span class="n">learn</span> <span class="o">=</span> <span class="n">text_classifier_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">AWD_LSTM</span><span class="p">,</span> <span class="n">drop_mult</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">accuracy</span><span class="p">)</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I manged to find the solution on the forums, which was to remove the offending directory in a terminal like this:  rm -rf imdb_tok</p>
+
+<p>I also found out that these videos (Lessons 1-8) were part of class given back in March and some of the notes are found on the <a href="https://forums.fast.ai/t/official-part-1-2020-updates-and-resources-thread/63376/9">forums.</a></p>
+
+<p>I’m going to go with Paperspace, but I wanted to resolve that error I continued to have above.
+It looks like it was the unofficial recommendation based on this forum post by Jeremy back in <a href="https://forums.fast.ai/t/official-part-1-2020-updates-and-resources-thread/63376/8">March 2020</a></p>
+
+<p>I did look at Google Colab, and although its easy to link through the guides, something tells me that its better with Gradient being that its a full jupyter environment.
+And it tends to be a lot slower than paperspace as I kept running the TextDataLoaders and comparing to the run from Gradient. (now that I have it working)
+Note:  All the labs in 01_intro.ipynb worked in Gradient, and WAS working in Google colab.  Then Google colab starting having issues and that sealed it for me.</p>
+
+<p>There is a credit as mentioned here:</p>
+<pre><code class="language-C#">Promotional credit
+Paperspace provides $15 of free Gradient credit for using paid instances. 
+This code is to be used for Fast.ai students only. 
+In your console, click on Billing and enter the promo code at the bottom right. 
+The promo code for this course is: FASTAIGR20. 
+Note: the code is valid until Dec 31st, 2020
+</code></pre>
+
+<p>In the beginning of Lesson 2, around 38:25 there was a comment made by Jeremy saying that the lessons (1-8) are not meant to cover the entire course.
+In the previous courses, there were 14 lessons, and he stated that to get through the book might be 3 courses.</p>
+
+<p>I would imagine that these courses would be forthcoming, but if you wanted to forge ahead, the book is a good reference guide.</p>
+
+<p>I believe I found my strategy.</p>
+<ol>
+  <li>Watch the video following along in the printed book version, making notes and annotations best I can</li>
+  <li>Read the chapter</li>
+  <li>Answer the Questions</li>
+  <li>Do the Lab</li>
+  <li>Write up for the day</li>
+  <li><a href="https://ethics.fast.ai/">Practical Data Ethics course</a> (something else to wind down the day)</li>
+</ol>
+
+<p>(or maybe switch between 3/4)</p>
+
+<p>I did quite a bit of work today, and wanted to continue, but if I keep going at this rate, I would finish all the videos before my study group begins!
+  That’s a goal I should have had last MONTH!</p>
+
