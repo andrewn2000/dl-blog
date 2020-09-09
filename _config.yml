@@ -14,8 +14,8 @@ github_repo: "dl-blog"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-# url: "https://andrewn2000.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://andynakamura.com
+url: "https://andrewn2000.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://andynakamura.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
